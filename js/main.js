@@ -1,23 +1,24 @@
-// main.js - Main Application Controller
-
 import { state, toggleTheme, initTheme } from './state.js';
 import { openPanel, closePanel, initPanelHandlers } from './panels.js';
 import { initInteractions } from './interactions.js';
 import { initPanels } from './dataInjector.js';
 
-// Initialize everything when DOM is ready
 document.addEventListener('DOMContentLoaded', async () => {
   console.log('[main] Initializing portfolio...');
-  
+
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.remove('dark');
+  } else {
+    document.body.classList.add('dark');
+  }
+
   try {
-    // 1. Initialize theme from localStorage
     initTheme();
     
-    // 2. Setup all event handlers
     initInteractions();
     initPanelHandlers();
     
-    // 3. Load all data
     await initPanels();
     
     console.log('[main] Portfolio initialized successfully');
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.error('[main] Error initializing portfolio:', error);
   }
 });
+
 
 // Handle page visibility changes
 document.addEventListener('visibilitychange', () => {

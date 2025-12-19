@@ -1,4 +1,3 @@
-// interactions.js - UI Event Handlers
 
 import { openPanel, closePanel } from './panels.js';
 import { toggleTheme } from './state.js';

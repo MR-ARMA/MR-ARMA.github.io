@@ -1,4 +1,3 @@
-// state.js - Application State Management
 
 export const state = {
   theme: 'light',

@@ -1,4 +1,3 @@
-// panels.js - Panel Management System
 
 import { state, setActivePanel } from './state.js';
 

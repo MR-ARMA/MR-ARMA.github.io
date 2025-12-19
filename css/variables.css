@@ -1,15 +1,13 @@
-/* variables.css - Design Tokens & Theme Variables */
 
 :root {
-  /* Color Palette - Refined Academic */
-  --color-primary: #1a365d;        /* Deep Navy */
-  --color-primary-light: #2c5282;  /* Ocean Blue */
-  --color-accent: #d97706;         /* Amber */
-  --color-accent-light: #f59e0b;   /* Light Amber */
+  --color-primary: #1a365d;        
+  --color-primary-light: #2c5282;  
+  --color-accent: #d97706;        
+  --color-accent-light: #f59e0b;  
   
   /* Backgrounds */
-  --bg-light: #faf9f7;             /* Warm White */
-  --bg-dark: #0f172a;              /* Deep Slate */
+  --bg-light: #faf9f7;            
+  --bg-dark: #0f172a;              
   --bg-card-light: #ffffff;
   --bg-card-dark: #1e293b;
   

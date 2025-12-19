@@ -1,4 +1,3 @@
-// dataInjector.js - Dynamic Data Loading System
 
 // Fetch JSON data with error handling
 async function fetchData(file) {
