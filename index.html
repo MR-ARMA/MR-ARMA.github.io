@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MR-ARMA - AI Researcher & Developer exploring the intersection of artificial intelligence, human systems, and meaning">
+  <title>MR-ARMA | AI Researcher & Developer</title>
+
+  <!-- Preload critical fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/panels.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/education.css">
+  <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+    <span class="theme-icon"></span>
+  </button>
+
+  <!-- Header / Hero -->
+  <header class="hero">
+    <div class="hero-content">
+      <img src="assets/logo.png" alt="MR-ARMA" class="hero-logo" loading="eager">
+      <h1 class="hero-name">MR-ARMA</h1>
+      <p class="hero-tagline">Artificial Intelligence · Humans · Insight</p>
+
+      <!-- Social Links -->
+      <nav class="hero-socials" aria-label="Social media links">
+        <a href="mailto:a.mahdizadeh@ec.iut.ac.ir" class="social-btn" aria-label="Email">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          <span>Email</span>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/alireza-mahdizadeh-275215292/" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+        
+        <a href="https://medium.com/@alireza.mahdizadeh173" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Medium">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+          </svg>
+          <span>Medium</span>
+        </a>
+        
+        <a href="https://github.com/MR-ARMA" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Professional Summary -->
+    <section class="card summary-section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">
+        Passionate about advancing artificial intelligence to understand human behavior, cognition, and social dynamics. 
+        Committed to exploring the intersection of technology and human systems with analytical rigor and thoughtful precision.
+      </p>
+
+
+  <!-- Resume Button -->
+  <a href="assets/MR-ARMA_CV.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn">
+    View My CV
+  </a>
+</section>
+
+
+    <!-- Portfolio Navigation -->
+    <section class="card portfolio-section">
+      <h2 class="section-title">Explore Portfolio</h2>
+      <nav class="section-buttons" aria-label="Portfolio sections">
+        <button class="chip" data-panel="panel-edu-full" aria-label="View education">
+          <span class="chip-icon">🎓</span>
+          <span>Education</span>
+        </button>
+        <button class="chip" data-panel="panel-projects-full" aria-label="View projects">
+          <span class="chip-icon">💻</span>
+          <span>Projects</span>
+        </button>
+        <button class="chip" data-panel="panel-experience-full" aria-label="View experience">
+          <span class="chip-icon">💼</span>
+          <span>Experience</span>
+        </button>
+        <button class="chip" data-panel="panel-research-full" aria-label="View research interests">
+          <span class="chip-icon">🔬</span>
+          <span>Research</span>
+        </button>
+        <button class="chip" data-panel="panel-skills-full" aria-label="View skills">
+          <span class="chip-icon">⚡</span>
+          <span>Skills</span>
+        </button>
+        <button class="chip" data-panel="panel-langs-full" aria-label="View languages">
+          <span class="chip-icon">🌍</span>
+          <span>Languages</span>
+        </button>
+        <button class="chip" data-panel="panel-awards-full" aria-label="View awards">
+          <span class="chip-icon">🏆</span>
+          <span>Awards</span>
+        </button>
+        <button class="chip" data-panel="panel-publications-full" aria-label="View publications">
+          <span class="chip-icon">📄</span>
+          <span>Publications</span>
+        </button>
+      </nav>
+    </section>
+  </main>
+
+  <!-- Panels Container -->
+  <div id="panels-container" role="dialog" aria-modal="true">
+    <!-- Education Panel -->
+    <div class="panel panel-full" id="panel-edu-full" aria-labelledby="edu-title">
+      <button class="close-panel" aria-label="Close panel">&times;</button>
+      <h2 id="edu-title" class="panel-title">Education</h2>
+      <div id="education-list" class="panel-content"></div>
+    </div>
+
+    <!-- Projects Panel -->
+    <div class="panel panel-full" id="panel-projects-full" aria-labelledby="projects-title">
+      <button class="close-panel" aria-label="Close panel">&times;</button>
+      <h2 id="projects-title" class="panel-title">Selected Projects</h2>
+      <div id="projects-list" class="panel-content"></div>
+    </div>
+
+    <!-- Experience Panel -->
+    <div class="panel panel-full" id="panel-experience-full" aria-labelledby="experience-title">
+      <button class="close-panel" aria-label="Close panel">&times;</button>
+      <h2 id="experience-title" class="panel-title">Experience</h2>
+      <div id="experience-list" class="panel-content"></div>
+    </div>
+
+    <!-- Research Panel -->
+    <div class="panel panel-full" id="panel-research-full" aria-labelledby="research-title">
+      <button class="close-panel" aria-label="Close panel">&times;</button>
+      <h2 id="research-title" class="panel-title">Research Interests</h2>
+      <div id="research-list" class="panel-content"></div>
+    </div>
+
+    <!-- Skills Panel -->
+    <div class="panel panel-full" id="panel-skills-full" aria-labelledby="skills-title">
+      <button class="close-panel" aria-label="Close panel">&times;</button>
+      <h2 id="skills-title" class="panel-title">Technical Skills</h2>
+      <div id="skills-list" class="panel-content"></div>
+    </div>
+
+    <!-- Languages Panel -->
+    <div class="panel panel-full" id="panel-langs-full" aria-labelledby="langs-title">
+      <button class="close-panel" aria-label="Close panel">&times;</button>
+      <h2 id="langs-title" class="panel-title">Languages</h2>
+      <div id="langs-list" class="panel-content"></div>
+    </div>
+
+    <!-- Awards Panel -->
+    <div class="panel panel-full" id="panel-awards-full" aria-labelledby="awards-title">
+      <button class="close-panel" aria-label="Close panel">&times;</button>
+      <h2 id="awards-title" class="panel-title">Awards & Honors</h2>
+      <div id="awards-list" class="panel-content"></div>
+    </div>
+  </div>
+
+    <!-- Publication Panel -->
+    <div class="panel panel-full" id="panel-publications-full" aria-labelledby="publication-title">
+      <button class="close-panel" aria-label="Close panel">&times;</button>
+      <h2 id="publication-title" class="panel-title">Publications</h2>
+      <div id="publications-list" class="panel-content"></div>
+    </div>
+
+
+
+  <!-- Overlay for panels -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 MR-ARMA. Be your best, and do your best.</p>
+  </footer>
+
+  <!-- JS -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

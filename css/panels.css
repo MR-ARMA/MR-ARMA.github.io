@@ -1,0 +1,160 @@
+/* panels.css - Modal Panels & Overlay */
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+  z-index: var(--z-overlay);
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Panel Base */
+.panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 900px;
+  max-height: 85vh;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  border: 2px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-xl);
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all var(--transition-slow);
+  z-index: var(--z-modal);
+}
+
+.panel.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Panel Content */
+.panel-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Panel Title */
+.panel-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-xl);
+  padding-right: 60px; /* Space for close button */
+  position: relative;
+}
+
+.panel-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--color-accent), transparent);
+  border-radius: var(--radius-sm);
+}
+
+/* Panel Scrollbar */
+.panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.panel::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-lg);
+}
+
+.panel::-webkit-scrollbar-thumb {
+  background: var(--color-primary-light);
+  border-radius: var(--radius-lg);
+}
+
+.panel::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Panel Animations */
+@keyframes panelSlideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) translateY(0);
+  }
+}
+
+.panel.active {
+  animation: panelSlideIn var(--transition-slow) ease-out;
+}
+
+/* 3D Effect (Optional Enhancement) */
+.panel.three-d {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.panel.three-d .panel-content {
+  transform: rotateX(2deg) rotateY(-2deg);
+  transition: transform var(--transition-base);
+}
+
+.panel.three-d:hover .panel-content {
+  transform: rotateX(0deg) rotateY(0deg);
+}
+
+/* Responsive Panel */
+@media (max-width: 768px) {
+  .panel {
+    width: 95%;
+    max-height: 90vh;
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+  }
+  
+  .panel-title {
+    font-size: var(--font-size-2xl);
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .panel {
+    width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+    padding: var(--space-lg);
+  }
+  
+  .panel-title {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* Prevent body scroll when panel is open */
+body.panel-open {
+  overflow: hidden;
+}

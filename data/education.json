@@ -1,0 +1,16 @@
+[
+  {
+    "university": "Isfahan University of Technology",
+    "logo": "assets/logos/iut.png",
+    "degree": "Master's in Artificial Intelligence & Robotics",
+    "duration": "2025 - Present",
+    "location": "Isfahan, Iran"
+  },
+  {
+    "university": "University of Tehran",
+    "logo": "assets/logos/ut.png",
+    "degree": "Bachelor's in Computer Engineering",
+    "duration": "2021 - 2025",
+    "location": "Isfahan, Iran"
+  }
+]

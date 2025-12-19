@@ -1,0 +1,7 @@
+{
+  "title": "Project Name",
+  "description": "Brief but comprehensive description of the project",
+  "repo": "https://github.com/username/repository",
+  "logo": "assets/project-logos/project-name.png",
+  "tags": ["Technology1", "Technology2", "Technology3"]
+}
