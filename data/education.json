@@ -1,16 +1,18 @@
 [
   {
-    "university": "Isfahan University of Technology",
+    "university": "Isfahan University of Technology (IUT)",
     "logo": "assets/logos/iut.png",
-    "degree": "Master's in Artificial Intelligence & Robotics",
-    "duration": "2025 - Present",
-    "location": "Isfahan, Iran"
+    "degree": "M.Sc. in Artificial Intelligence & Robotics",
+    "duration": "Oct 2025 – Expected 2027",
+    "location": "Isfahan, Iran",
+    "details": "GPA: 16.75/20 (3.50/4.0) • Thesis: Dynamic Steering of Internal Mechanisms and Memory Management in LLMs for Agent Behavioral Stability • Supervisor: Dr. Hamidreza Hakim Davoodi"
   },
   {
-    "university": "University of Tehran",
+    "university": "University of Tehran (UT)",
     "logo": "assets/logos/ut.png",
-    "degree": "Bachelor's in Computer Engineering",
-    "duration": "2021 - 2025",
-    "location": "Isfahan, Iran"
+    "degree": "B.Sc. in Computer Engineering (Ranked 1st in Cohort)",
+    "duration": "Sep 2021 – May 2025",
+    "location": "Tehran, Iran",
+    "details": "GPA: 17.95/20 (3.85/4.0) • Ranked 1st among all entrants for three consecutive academic years (2022–2025) • Thesis: Deep Learning for Emotion & Personality Analysis"
   }
 ]

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MR-ARMA - AI Researcher & Developer exploring the intersection of artificial intelligence, human systems, and meaning">
-  <title>MR-ARMA | AI Researcher & Developer</title>
+  <meta name="description" content="Alireza Mahdizadeh (MR-ARMA) - AI Researcher exploring Reinforcement Learning, Continual Adaptation, Memory & Attention in Autonomous Agents, and Mathematical Foundations of ML.">
+  <title>Alireza Mahdizadeh (MR-ARMA) | AI Researcher</title>
 
   <!-- Preload critical fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="css/panels.css">
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/education.css">
-  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/project.css">
 </head>
 <body>
 
@@ -31,9 +31,9 @@
   <!-- Header / Hero -->
   <header class="hero">
     <div class="hero-content">
-      <img src="assets/logo.png" alt="MR-ARMA" class="hero-logo" loading="eager">
-      <h1 class="hero-name">MR-ARMA</h1>
-      <p class="hero-tagline">Artificial Intelligence · Humans · Insight</p>
+      <img src="assets/logo.png" alt="Alireza Mahdizadeh (MR-ARMA)" class="hero-logo" loading="eager">
+      <h1 class="hero-name">Alireza Mahdizadeh</h1>
+      <p class="hero-tagline">Reinforcement Learning · Autonomous Agents · Mathematical Foundations of AI</p>
 
       <!-- Social Links -->
       <nav class="hero-socials" aria-label="Social media links">
@@ -72,39 +72,44 @@
   <main class="container">
     <!-- Professional Summary -->
     <section class="card summary-section">
-      <h2 class="section-title">Professional Summary</h2>
+      <h2 class="section-title">About Me</h2>
       <p class="summary-text">
-        Passionate about advancing artificial intelligence to understand human behavior, cognition, and social dynamics. 
-        Committed to exploring the intersection of technology and human systems with analytical rigor and thoughtful precision.
+        I am an M.Sc. student in Artificial Intelligence & Robotics at Isfahan University of Technology and a Computer Engineering graduate from the University of Tehran (Ranked 1st in cohort). My research bridges rigorous mathematical foundations—such as probability theory, optimization, and differential geometry—with continual reinforcement learning, representation learning, and structured memory and attention mechanisms in autonomous agents.
       </p>
 
-
-  <!-- Resume Button -->
-  <a href="assets/MR-ARMA_CV.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn">
-    View My CV
-  </a>
-</section>
-
+      <!-- Resume Button -->
+      <a href="assets/MR-ARMA_CV.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn">
+        View Curriculum Vitae (PDF)
+      </a>
+    </section>
 
     <!-- Portfolio Navigation -->
     <section class="card portfolio-section">
-      <h2 class="section-title">Explore Portfolio</h2>
+      <h2 class="section-title">Explore Academic Profile</h2>
       <nav class="section-buttons" aria-label="Portfolio sections">
         <button class="chip" data-panel="panel-edu-full" aria-label="View education">
           <span class="chip-icon">🎓</span>
           <span>Education</span>
         </button>
+        <button class="chip" data-panel="panel-publications-full" aria-label="View publications">
+          <span class="chip-icon">📄</span>
+          <span>Publications</span>
+        </button>
         <button class="chip" data-panel="panel-projects-full" aria-label="View projects">
           <span class="chip-icon">💻</span>
-          <span>Projects</span>
+          <span>Research & Projects</span>
         </button>
         <button class="chip" data-panel="panel-experience-full" aria-label="View experience">
           <span class="chip-icon">💼</span>
-          <span>Experience</span>
+          <span>Teaching</span>
         </button>
         <button class="chip" data-panel="panel-research-full" aria-label="View research interests">
           <span class="chip-icon">🔬</span>
-          <span>Research</span>
+          <span>Research Interests</span>
+        </button>
+        <button class="chip" data-panel="panel-awards-full" aria-label="View awards">
+          <span class="chip-icon">🏆</span>
+          <span>Honors & Awards</span>
         </button>
         <button class="chip" data-panel="panel-skills-full" aria-label="View skills">
           <span class="chip-icon">⚡</span>
@@ -113,14 +118,6 @@
         <button class="chip" data-panel="panel-langs-full" aria-label="View languages">
           <span class="chip-icon">🌍</span>
           <span>Languages</span>
-        </button>
-        <button class="chip" data-panel="panel-awards-full" aria-label="View awards">
-          <span class="chip-icon">🏆</span>
-          <span>Awards</span>
-        </button>
-        <button class="chip" data-panel="panel-publications-full" aria-label="View publications">
-          <span class="chip-icon">📄</span>
-          <span>Publications</span>
         </button>
       </nav>
     </section>
@@ -135,17 +132,24 @@
       <div id="education-list" class="panel-content"></div>
     </div>
 
+    <!-- Publications Panel -->
+    <div class="panel panel-full" id="panel-publications-full" aria-labelledby="publication-title">
+      <button class="close-panel" aria-label="Close panel">&times;</button>
+      <h2 id="publication-title" class="panel-title">Publications & Books</h2>
+      <div id="publications-list" class="panel-content"></div>
+    </div>
+
     <!-- Projects Panel -->
     <div class="panel panel-full" id="panel-projects-full" aria-labelledby="projects-title">
       <button class="close-panel" aria-label="Close panel">&times;</button>
-      <h2 id="projects-title" class="panel-title">Selected Projects</h2>
+      <h2 id="projects-title" class="panel-title">Research & Selected Projects</h2>
       <div id="projects-list" class="panel-content"></div>
     </div>
 
     <!-- Experience Panel -->
     <div class="panel panel-full" id="panel-experience-full" aria-labelledby="experience-title">
       <button class="close-panel" aria-label="Close panel">&times;</button>
-      <h2 id="experience-title" class="panel-title">Experience</h2>
+      <h2 id="experience-title" class="panel-title">Teaching & Academic Experience</h2>
       <div id="experience-list" class="panel-content"></div>
     </div>
 
@@ -154,6 +158,13 @@
       <button class="close-panel" aria-label="Close panel">&times;</button>
       <h2 id="research-title" class="panel-title">Research Interests</h2>
       <div id="research-list" class="panel-content"></div>
+    </div>
+
+    <!-- Awards Panel -->
+    <div class="panel panel-full" id="panel-awards-full" aria-labelledby="awards-title">
+      <button class="close-panel" aria-label="Close panel">&times;</button>
+      <h2 id="awards-title" class="panel-title">Honors & Awards</h2>
+      <div id="awards-list" class="panel-content"></div>
     </div>
 
     <!-- Skills Panel -->
@@ -169,30 +180,14 @@
       <h2 id="langs-title" class="panel-title">Languages</h2>
       <div id="langs-list" class="panel-content"></div>
     </div>
-
-    <!-- Awards Panel -->
-    <div class="panel panel-full" id="panel-awards-full" aria-labelledby="awards-title">
-      <button class="close-panel" aria-label="Close panel">&times;</button>
-      <h2 id="awards-title" class="panel-title">Awards & Honors</h2>
-      <div id="awards-list" class="panel-content"></div>
-    </div>
   </div>
-
-    <!-- Publication Panel -->
-    <div class="panel panel-full" id="panel-publications-full" aria-labelledby="publication-title">
-      <button class="close-panel" aria-label="Close panel">&times;</button>
-      <h2 id="publication-title" class="panel-title">Publications</h2>
-      <div id="publications-list" class="panel-content"></div>
-    </div>
-
-
 
   <!-- Overlay for panels -->
   <div class="overlay" id="overlay"></div>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 MR-ARMA. Be your best, and do your best.</p>
+    <p>&copy; 2026 Alireza Mahdizadeh (MR-ARMA). Be your best, and do your best.</p>
   </footer>
 
   <!-- JS -->

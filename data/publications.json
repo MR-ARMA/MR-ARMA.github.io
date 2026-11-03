@@ -1,14 +1,48 @@
 [
   {
-    "title": "RETURN TO THE REFLECTION SYMMETRY OF PLANE CURVES",
+    "title": "Return to the Reflection Symmetry of Plane Curves",
     "authors": ["M. Salarinoghabi", "A. Mahdizadeh", "A. Cambraia Jr."],
     "affiliations": [
-      "Departamento de Matemática, Universidade Federal de Viçosa, Brazil",
-      "Bachelor’s student in Computer Engineering, University of Tehran, Iran"
+      "University of Tehran, Iran",
+      "Universidade Federal de Viçosa, Brazil"
     ],
-    "journal": "Bulletin of Iranian Mathematical Society",
-    "year": "2025",
-    "status": "Under Review",
+    "journal": "Bulletin of the Iranian Mathematical Society (Springer), Vol. 52, No. 18",
+    "year": "2026",
+    "status": "Published (Q2)",
+    "doi": "https://link.springer.com/article/10.1007/s41980-026-01036-z"
+  },
+  {
+    "title": "Curvilinear Reflection Through Tubular Neighborhoods: Metric Distortion, Singular Values, and the Role of Torsion",
+    "authors": ["A. Mahdizadeh", "A. Hasan-Zadeh"],
+    "affiliations": [
+      "Department of Electrical and Computer Engineering, Isfahan University of Technology, Iran",
+      "College of Engineering, University of Tehran, Iran"
+    ],
+    "journal": "Results in Mathematics (Springer)",
+    "year": "2026",
+    "status": "Under Review (Manuscript ID: RIMA-D-26-01982)",
+    "doi": ""
+  },
+  {
+    "title": "Persian Translation: Machine Learning Handbook (by Prof. Martha White)",
+    "authors": ["Translated by A. Mahdizadeh"],
+    "affiliations": [
+      "Original work by Prof. Martha White, University of Alberta"
+    ],
+    "journal": "Academic Book Translation (Probability Theory, Statistical Estimation & Optimization)",
+    "year": "2023",
+    "status": "Completed",
+    "doi": ""
+  },
+  {
+    "title": "Artificial Intelligence: The Last Achievement of Humanity (in Persian)",
+    "authors": ["A. Mahdizadeh"],
+    "affiliations": [
+      "Independent Monograph"
+    ],
+    "journal": "Analytical Book on Philosophical Perspectives and Cognitive Paradigms of AI",
+    "year": "2023",
+    "status": "Authored Book",
     "doi": ""
   }
 ]

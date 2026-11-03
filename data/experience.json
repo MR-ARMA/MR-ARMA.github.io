@@ -1,0 +1,30 @@
+[
+  {
+    "role": "Teaching Assistant — Data Structures and Algorithms",
+    "organization": "University of Tehran (Supervisor: Dr. Ali Naghash Asadi)",
+    "duration": "Spring 2024 (Feb 2024 – Jun 2024)",
+    "location": "Tehran, Iran",
+    "description": "Mentored undergraduate students on algorithm design, computational complexity analysis, graph algorithms, and C++ data structure implementations."
+  },
+  {
+    "role": "Teaching Assistant — Engineering Statistics & Probability",
+    "organization": "University of Tehran (Supervisor: Dr. Atefeh Hasanzadeh)",
+    "duration": "Fall 2023 (Sep 2023 – Jan 2024)",
+    "location": "Tehran, Iran",
+    "description": "Provided instruction on statistical estimation theory (MLE/MAP), probability distributions, random variables, hypothesis testing, and data interpretation techniques."
+  },
+  {
+    "role": "Teaching Assistant — Engineering Mathematics",
+    "organization": "University of Tehran (Supervisor: Dr. Atefeh Hasanzadeh)",
+    "duration": "Spring 2023 (Feb 2023 – Jun 2023)",
+    "location": "Tehran, Iran",
+    "description": "Led weekly problem-solving sessions, clarified advanced calculus, differential equations, Fourier analysis, and linear algebra concepts, and graded assignments."
+  },
+  {
+    "role": "Content Creator & Technical Writer",
+    "organization": "BIT Student Scientific Journal, University of Tehran",
+    "duration": "2022 – 2024",
+    "location": "Tehran, Iran",
+    "description": "Authored educational articles and technical reviews on computer engineering and artificial intelligence topics for undergraduate students."
+  }
+]

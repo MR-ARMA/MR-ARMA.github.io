@@ -1,20 +1,8 @@
 [
-  "✅ Python (Clean code, OOP, NumPy, Pandas, Matplotlib, Seaborn)",
-  "✅ Linear Algebra (Vectors, Matrices, Eigenvalues, Dot Product, Norms)",
-  "✅ Probability & Statistics (Distributions, Expectation, Variance, Bayes Theorem)",
-  "✅ Classical Machine Learning (Linear/Logistic Regression, k-NN, SVM, Decision Trees, Random Forest, Gradient Boosting)",
-  "❌ Machine Learning Concepts (Bias-Variance Tradeoff, Regularization, Feature Engineering, Cross-Validation)",
-  "❌ Model Evaluation (Accuracy, Precision, Recall, F1-score, ROC-AUC)",
-  "❌ Scikit-learn (Pipelines, Model Selection, Hyperparameter Tuning)",
-  "❌ Neural Network Fundamentals (Perceptron, Backpropagation, Activation & Loss Functions)",
-  "❌ Deep Learning with PyTorch (Tensors, Autograd, nn.Module, Training Loops)",
-  "❌ NLP Fundamentals (Tokenization, TF-IDF, Bag of Words, Text Preprocessing)",
-  "❌ Modern NLP (Word Embeddings, Attention Mechanism, Transformers – Usage Level)",
-  "❌ Research Skills (Reading Papers, Methodology Analysis, Critical Evaluation)",
-  "❌ Scientific Writing (Problem Definition, Method-Experiment-Result Structure)",
-  "❌ Git (Version Control, Branching, Collaboration)",
-  "❌ Linux & Command Line (Environment Management, Experiment Execution)",
-  "❌ Training Large LLMs from Scratch",
-  "❌ Advanced Measure-Theoretic Probability",
-  "❌ Docker / Kubernetes"
+  "Programming Languages: Python (Advanced), C++, MATLAB, SQL, Bash",
+  "Deep Learning & RL: PyTorch, Neural Network Architectures, Experience Replay, Representation Learning, Transformers",
+  "Machine Learning & Data Science: Scikit-learn, NumPy, Pandas, Matplotlib, Seaborn, Probabilistic Modeling (MLE/MAP)",
+  "LLM & Agent Tooling: Attention Steering, Memory Architectures, vLLM, Ollama",
+  "Mathematics: Linear Algebra, Probability & Mathematical Statistics, Numerical Optimization, Differential Geometry",
+  "Tools & Environment: Linux (Ubuntu), Git & GitHub, LaTeX, Miniconda"
 ]

@@ -1,4 +1,3 @@
-
 // Fetch JSON data with error handling
 async function fetchData(file) {
   try {
@@ -18,19 +17,11 @@ async function fetchData(file) {
 
 // Safe DOM append with validation
 function safeAppend(container, child) {
-  if (!container) {
-    console.warn('[dataInjector] Container is null, cannot append child');
-    return false;
-  }
-  if (!child) {
-    console.warn('[dataInjector] Child element is null, cannot append');
-    return false;
-  }
+  if (!container || !child) return false;
   container.appendChild(child);
   return true;
 }
 
-// Create loading indicator
 function createLoadingIndicator() {
   const loader = document.createElement('div');
   loader.className = 'loading-indicator';
@@ -38,7 +29,6 @@ function createLoadingIndicator() {
   return loader;
 }
 
-// Create error message
 function createErrorMessage(message) {
   const error = document.createElement('div');
   error.className = 'error-message';
@@ -49,10 +39,7 @@ function createErrorMessage(message) {
 // ==================== Education ====================
 export async function populateEducation() {
   const eduPanel = document.getElementById('education-list');
-  if (!eduPanel) {
-    console.warn('[dataInjector] education-list not found');
-    return;
-  }
+  if (!eduPanel) return;
   
   eduPanel.innerHTML = '';
   eduPanel.appendChild(createLoadingIndicator());
@@ -65,7 +52,7 @@ export async function populateEducation() {
     return;
   }
 
-  data.forEach((item, index) => {
+  data.forEach((item) => {
     const eduItem = document.createElement('div');
     eduItem.className = 'education-item';
     
@@ -74,14 +61,16 @@ export async function populateEducation() {
     const degree = item.degree || 'Degree';
     const duration = item.duration || '';
     const location = item.location || '';
+    const details = item.details ? `<p style="margin-top: 6px; font-size: 0.92rem; opacity: 0.9;">${item.details}</p>` : '';
 
     eduItem.innerHTML = `
       <div class="edu-logo">
-        <img src="${logo}" alt="${university} logo" loading="lazy" onerror="this.src='assets/logos/placeholder.png'">
+        <img src="${logo}" alt="${university} logo" loading="lazy" onerror="this.style.display='none'">
       </div>
       <div class="edu-info">
         <h3>${degree}</h3>
-        <p>${university}${duration ? ' • ' + duration : ''}${location ? ' • ' + location : ''}</p>
+        <p><strong>${university}</strong>${duration ? ' • ' + duration : ''}${location ? ' • ' + location : ''}</p>
+        ${details}
       </div>
     `;
     
@@ -92,10 +81,7 @@ export async function populateEducation() {
 // ==================== Projects ====================
 export async function populateProjects() {
   const projPanel = document.getElementById('projects-list');
-  if (!projPanel) {
-    console.warn('[dataInjector] projects-list not found');
-    return;
-  }
+  if (!projPanel) return;
   
   projPanel.innerHTML = '';
   projPanel.appendChild(createLoadingIndicator());
@@ -108,15 +94,15 @@ export async function populateProjects() {
     return;
   }
 
-  data.forEach((item, index) => {
+  data.forEach((item) => {
     const projItem = document.createElement('div');
     projItem.className = 'project-item';
     
-    const logo = item.logo ? `<div class="project-logo"><img src="${item.logo}" alt="${item.title} logo" loading="lazy" onerror="this.src='assets/project-logos/placeholder.png'"></div>` : '';
+    const logo = item.logo ? `<div class="project-logo"><img src="${item.logo}" alt="${item.title} logo" loading="lazy" onerror="this.parentElement.style.display='none'"></div>` : '';
     const title = item.title || 'Project';
-    const description = item.description || 'No description available.';
+    const description = item.description || '';
     const repo = item.repo ? `<a href="${item.repo}" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub</a>` : '';
-    const tags = Array.isArray(item.tags) && item.tags.length > 0 ? `<small>${item.tags.join(', ')}</small>` : '';
+    const tags = Array.isArray(item.tags) && item.tags.length > 0 ? `<small>${item.tags.join(' · ')}</small>` : '';
     
     projItem.innerHTML = `
       <div class="project-header">
@@ -137,10 +123,7 @@ export async function populateProjects() {
 // ==================== Experience ====================
 export async function populateExperience() {
   const expPanel = document.getElementById('experience-list');
-  if (!expPanel) {
-    console.warn('[dataInjector] experience-list not found');
-    return;
-  }
+  if (!expPanel) return;
   
   expPanel.innerHTML = '';
   expPanel.appendChild(createLoadingIndicator());
@@ -165,8 +148,8 @@ export async function populateExperience() {
     
     expItem.innerHTML = `
       <h3>${role}</h3>
-      <p class="text-muted">${organization}${duration ? ' • ' + duration : ''}${location ? ' • ' + location : ''}</p>
-      ${description ? `<p>${description}</p>` : ''}
+      <p class="text-muted"><strong>${organization}</strong>${duration ? ' • ' + duration : ''}${location ? ' • ' + location : ''}</p>
+      ${description ? `<p style="margin-top: 8px;">${description}</p>` : ''}
     `;
     
     expItem.style.cssText = `
@@ -187,10 +170,7 @@ export async function populateExperience() {
 // ==================== Research Interests ====================
 export async function populateResearch() {
   const researchPanel = document.getElementById('research-list');
-  if (!researchPanel) {
-    console.warn('[dataInjector] research-list not found');
-    return;
-  }
+  if (!researchPanel) return;
   
   researchPanel.innerHTML = '';
   researchPanel.appendChild(createLoadingIndicator());
@@ -206,9 +186,9 @@ export async function populateResearch() {
   const ul = document.createElement('ul');
   ul.className = 'list-panel';
   
-  data.forEach((item, index) => {
+  data.forEach((item) => {
     const li = document.createElement('li');
-    li.textContent = item || 'Research interest';
+    li.textContent = item;
     ul.appendChild(li);
   });
   
@@ -218,10 +198,7 @@ export async function populateResearch() {
 // ==================== Languages ====================
 export async function populateLanguages() {
   const langPanel = document.getElementById('langs-list');
-  if (!langPanel) {
-    console.warn('[dataInjector] langs-list not found');
-    return;
-  }
+  if (!langPanel) return;
   
   langPanel.innerHTML = '';
   langPanel.appendChild(createLoadingIndicator());
@@ -237,11 +214,9 @@ export async function populateLanguages() {
   const ul = document.createElement('ul');
   ul.className = 'list-panel';
   
-  data.forEach((lang, index) => {
-    const name = lang.name || 'Language';
-    const level = lang.level || '';
+  data.forEach((lang) => {
     const li = document.createElement('li');
-    li.textContent = `${name}${level ? ' — ' + level : ''}`;
+    li.innerHTML = `<strong>${lang.name}</strong>${lang.level ? ' — ' + lang.level : ''}`;
     ul.appendChild(li);
   });
   
@@ -251,10 +226,7 @@ export async function populateLanguages() {
 // ==================== Skills ====================
 export async function populateSkills() {
   const skillsPanel = document.getElementById('skills-list');
-  if (!skillsPanel) {
-    console.warn('[dataInjector] skills-list not found');
-    return;
-  }
+  if (!skillsPanel) return;
   
   skillsPanel.innerHTML = '';
   skillsPanel.appendChild(createLoadingIndicator());
@@ -270,9 +242,14 @@ export async function populateSkills() {
   const ul = document.createElement('ul');
   ul.className = 'list-panel';
   
-  data.forEach((skill, index) => {
+  data.forEach((skill) => {
     const li = document.createElement('li');
-    li.textContent = skill || 'Skill';
+    const parts = skill.split(':');
+    if (parts.length > 1) {
+      li.innerHTML = `<strong>${parts[0]}:</strong>${parts.slice(1).join(':')}`;
+    } else {
+      li.textContent = skill;
+    }
     ul.appendChild(li);
   });
   
@@ -282,10 +259,7 @@ export async function populateSkills() {
 // ==================== Awards ====================
 export async function populateAwards() {
   const awardsPanel = document.getElementById('awards-list');
-  if (!awardsPanel) {
-    console.warn('[dataInjector] awards-list not found');
-    return;
-  }
+  if (!awardsPanel) return;
   
   awardsPanel.innerHTML = '';
   awardsPanel.appendChild(createLoadingIndicator());
@@ -301,11 +275,9 @@ export async function populateAwards() {
   const ul = document.createElement('ul');
   ul.className = 'list-panel';
   
-  data.forEach((award, index) => {
+  data.forEach((award) => {
     const li = document.createElement('li');
-    const title = award.title || 'Award';
-    const year = award.year || '';
-    li.textContent = `${title}${year ? ' — ' + year : ''}`;
+    li.innerHTML = `<strong>${award.title}</strong>${award.year ? ' <span class="text-muted">(' + award.year + ')</span>' : ''}`;
     ul.appendChild(li);
   });
   
@@ -315,10 +287,7 @@ export async function populateAwards() {
 // ==================== Publications ====================
 export async function populatePublications() {
   const pubPanel = document.getElementById('publications-list');
-  if (!pubPanel) {
-    console.warn('[dataInjector] publications-list not found');
-    return;
-  }
+  if (!pubPanel) return;
 
   pubPanel.innerHTML = '';
   pubPanel.appendChild(createLoadingIndicator());
@@ -334,15 +303,15 @@ export async function populatePublications() {
   const ul = document.createElement('ul');
   ul.className = 'list-panel';
 
-  data.forEach((pub, index) => {
+  data.forEach((pub) => {
     const li = document.createElement('li');
     li.innerHTML = `
       <strong>${pub.title}</strong><br>
-      ${pub.authors.join(', ')}<br>
-      ${pub.affiliations.join('; ')}<br>
-      ${pub.journal || ''} ${pub.year ? '• ' + pub.year : ''}<br>
-      ${pub.status ? '<em>Status: ' + pub.status + '</em>' : ''}<br>
-      ${pub.doi ? '<a href="' + pub.doi + '" target="_blank">DOI</a>' : ''}
+      <span>${pub.authors.join(', ')}</span><br>
+      <small class="text-muted">${pub.affiliations.join(' • ')}</small><br>
+      <span>${pub.journal || ''} ${pub.year ? '(' + pub.year + ')' : ''}</span><br>
+      ${pub.status ? '<em>Status: ' + pub.status + '</em>' : ''}
+      ${pub.doi ? ' — <a href="' + pub.doi + '" target="_blank" rel="noopener noreferrer"><strong>[View Paper / DOI]</strong></a>' : ''}
     `;
     ul.appendChild(li);
   });
@@ -350,15 +319,9 @@ export async function populatePublications() {
   safeAppend(pubPanel, ul);
 }
 
-
 // ==================== Initialize All ====================
 export async function initPanels() {
-  console.log('[dataInjector] Starting data initialization...');
-  
-  const startTime = performance.now();
-  
   try {
-    // Load all data in parallel for better performance
     await Promise.all([
       populateEducation(),
       populateProjects(),
@@ -369,11 +332,6 @@ export async function initPanels() {
       populateAwards(),
       populatePublications()
     ]);
-    
-    const endTime = performance.now();
-    const duration = (endTime - startTime).toFixed(2);
-    
-    console.log(`[dataInjector] All data loaded successfully in ${duration}ms`);
   } catch (error) {
     console.error('[dataInjector] Error during initialization:', error);
   }
