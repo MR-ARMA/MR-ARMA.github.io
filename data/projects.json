@@ -7,30 +7,23 @@
     "tags": ["Memory Structuring", "Attention Mechanisms", "Continual Adaptation", "Multi-Agent Systems"]
   },
   {
-    "title": "Experience Replay Benchmark in Reinforcement Learning",
-    "description": "Implemented and benchmarked experience replay sampling strategies (endpoint_replay_benchmark.py) in Python to evaluate sample efficiency, memory retention, and learning stability near trajectory endpoints in reinforcement learning environments.",
-    "repo": "https://github.com/MR-ARMA",
-    "logo": "",
-    "tags": ["Reinforcement Learning", "Experience Replay", "Python", "Continual RL"]
-  },
-  {
     "title": "Statistical Estimation & Optimization Foundations in Code",
     "description": "Developed an open-source collection of modular Python implementations covering Maximum Likelihood Estimation (MLE), Maximum A Posteriori (MAP), regularization strategies, and gradient-based numerical optimization algorithms from scratch.",
-    "repo": "https://github.com/MR-ARMA/Machine-Learning-Handbook",
+    "repo": "https://github.com/MR-ARMA/ML-Learning-Journey/tree/main",
     "logo": "",
     "tags": ["Probabilistic ML", "Optimization", "MLE / MAP", "Python", "NumPy"]
   },
   {
     "title": "Quantifying Gender Bias in Word Embeddings (GloVe)",
     "description": "Conducted a rigorous statistical and geometric subspace analysis of pre-trained GloVe word embeddings across 380+ occupational titles, measuring representational biases against empirical U.S. Bureau of Labor Statistics workforce data.",
-    "repo": "https://github.com/MR-ARMA",
+    "repo": "https://github.com/MR-ARMA/DL-Leaning-Journey/tree/main/03-Gender-Bias-in-Occupations",
     "logo": "",
     "tags": ["Representation Learning", "Vector Space Geometry", "GloVe", "Statistical Analysis"]
   },
   {
     "title": "Multi-Label Emotion & Personality Classification (B.Sc. Thesis)",
     "description": "Developed a deep learning NLP pipeline on the GoEmotions dataset using Word2Vec, GloVe, and Transformer embeddings across LSTM, GRU, BiLSTM, and BiGRU architectures, achieving a micro-average F1 score of 48.9% and validation AUC of 0.6009.",
-    "repo": "https://github.com/MR-ARMA",
+    "repo": "https://github.com/MR-ARMA/DL-Leaning-Journey/tree/main/02-PersonaLens",
     "logo": "",
     "tags": ["PyTorch", "Deep Learning", "Transformers", "LSTM / BiGRU", "GoEmotions"]
   }
