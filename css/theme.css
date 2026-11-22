@@ -1,12 +1,62 @@
-
-/* Theme Transition */
+/* =========================================================
+   1. Global Smooth Background Transitions (Premium Effect)
+   ========================================================= */
 body {
-  transition: 
-    background-color var(--transition-base),
-    color var(--transition-base);
+  position: relative;
+  /* رنگ بکگراند اصلی را روی ترانسپرنت می‌گذاریم تا لایه‌های زیرین دیده شوند */
+  background: transparent !important; 
+  color: var(--text-primary);
+  transition: color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Smooth transitions for themed elements */
+body.dark {
+  color: var(--text-primary-dark);
+}
+
+/* =========================================================
+   2. Full-Screen Ambient Glow Layers
+   ========================================================= */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1; /* این لایه را پشت تمام المان‌های سایت قرار می‌دهد */
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* لایه تم روشن (Light Theme Layer) */
+body::before {
+  background-color: var(--bg-light);
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(26, 54, 93, 0.05) 0%, transparent 60%),
+    radial-gradient(circle at 90% 90%, rgba(217, 119, 6, 0.04) 0%, transparent 60%);
+  opacity: 1;
+}
+
+/* لایه تم تاریک (Dark Theme Layer) */
+body::after {
+  background-color: var(--bg-dark);
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 90% 90%, rgba(245, 158, 11, 0.05) 0%, transparent 60%);
+  opacity: 0;
+}
+
+/* سوییچ کردن بین دو لایه هنگام تغییر تم */
+body.dark::before { opacity: 0; }
+body.dark::after { opacity: 1; }
+
+/* غیرفعال کردن بک‌گراند قدیمی Hero برای جلوگیری از تداخل */
+.hero::before { display: none !important; }
+
+/* =========================================================
+   3. Component Transitions (Cards, Panels, Buttons)
+   ========================================================= */
 .card,
 .panel,
 .social-btn,
@@ -17,48 +67,29 @@ body {
 .section-title,
 .list-panel li {
   transition: 
-    background-color var(--transition-base),
-    color var(--transition-base),
-    border-color var(--transition-base),
-    transform var(--transition-base),
-    box-shadow var(--transition-base);
+    background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-/* Dark Theme Specific Styles */
-body.dark {
-  background-color: var(--bg-dark);
-  color: var(--text-primary-dark);
-}
-
-body.dark .hero::before {
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(96, 165, 250, 0.12) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
-}
-
-body.dark .hero-name {
-  color: var(--color-accent-light);
-}
-
-body.dark .hero-tagline {
-  color: var(--text-muted-dark);
-}
+/* =========================================================
+   4. Dark Theme Component Styles
+   ========================================================= */
+body.dark .hero-name { color: var(--color-accent-light); }
+body.dark .hero-tagline { color: var(--text-muted-dark); }
+body.dark .section-title { color: var(--color-accent-light); }
+body.dark .summary-text { color: var(--text-secondary-dark); }
 
 body.dark .card {
   background-color: var(--bg-card-dark);
-  border-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.03);
 }
 
 body.dark .card:hover {
-  border-color: var(--color-accent);
-}
-
-body.dark .section-title {
-  color: var(--color-accent-light);
-}
-
-body.dark .summary-text {
-  color: var(--text-secondary-dark);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
 
 body.dark .panel {
@@ -66,116 +97,72 @@ body.dark .panel {
   border-color: var(--glass-border-dark);
 }
 
-body.dark .panel-title {
-  color: var(--color-accent-light);
-}
+body.dark .panel-title { color: var(--color-accent-light); }
 
 body.dark .list-panel li {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 body.dark .footer {
-  border-top-color: rgba(255, 255, 255, 0.1);
+  border-top-color: rgba(255, 255, 255, 0.05);
   color: var(--text-muted-dark);
 }
 
-body.dark .theme-toggle {
-  background: rgba(30, 41, 59, 0.9);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
+body.dark .theme-toggle, 
 body.dark .close-panel {
-  background: rgba(30, 41, 59, 0.9);
+  background: rgba(15, 23, 42, 0.8);
   border-color: rgba(255, 255, 255, 0.1);
   color: var(--text-primary-dark);
 }
 
-/* Light Theme Enhancements */
-body:not(.dark) .hero::before {
-  opacity: 0.5;
-}
-
+/* Light Theme Card Adjustments */
 body:not(.dark) .card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+  background: rgba(255, 255, 255, 0.95);
 }
 
-/* Theme-specific animations */
+/* =========================================================
+   5. Glowing Animations & Resume Button
+   ========================================================= */
 @keyframes themeGlow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(217, 119, 6, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(217, 119, 6, 0.5);
-  }
+  0%, 100% { box-shadow: 0 0 15px rgba(217, 119, 6, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(217, 119, 6, 0.5); }
 }
 
 body.dark .theme-toggle:hover {
   animation: themeGlow 2s ease-in-out infinite;
 }
 
-/* Preserve user preference */
-@media (prefers-color-scheme: dark) {
-  body:not(.light) {
-    background-color: var(--bg-dark);
-    color: var(--text-primary-dark);
-  }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .card,
-  .panel,
-  .chip,
-  .social-btn {
-    border-width: 3px;
-  }
-  
-  .section-title::after {
-    height: 4px;
-  }
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-  
-  .hero-content,
-  .hero-logo,
-  .hero-name,
-  .hero-tagline,
-  .hero-socials {
-    animation: none !important;
-  }
-}
-
 .resume-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1.5rem;
   background-color: var(--color-primary);
   color: #fff;
   font-weight: 600;
   font-size: 1rem;
   border-radius: var(--radius-md);
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+body.dark .resume-btn {
+  background-color: var(--color-accent);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.2);
 }
 
 .resume-btn:hover {
-  background-color: var(--color-primary-dark);
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-.resume-btn:active {
-  transform: translateY(0);
+body.dark .resume-btn:hover {
+  background-color: var(--color-accent-light);
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.3);
 }
+
+.resume-btn:active { transform: translateY(0); }

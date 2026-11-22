@@ -5,15 +5,15 @@
   --color-accent: #d97706;        
   --color-accent-light: #f59e0b;  
   
-  /* Backgrounds */
-  --bg-light: #faf9f7;            
-  --bg-dark: #0f172a;              
+ /* Backgrounds */
+  --bg-light: #f8fafc;            /* تغییر به یک سفید مدرن و هماهنگ با تم تاریک */
+  --bg-dark: #0a0f1c;              /* تاریک‌تر و عمیق‌تر برای چشم‌نوازی بیشتر */
   --bg-card-light: #ffffff;
-  --bg-card-dark: #1e293b;
+  --bg-card-dark: #151e32;         /* رنگ کارت‌ها در حالت تاریک، کمی متمایزتر */
   
   /* Text Colors */
-  --text-primary-light: #1e293b;
-  --text-primary-dark: #f1f5f9;
+  --text-primary-light: #0f172a;
+  --text-primary-dark: #f8fafc;
   --text-secondary-light: #475569;
   --text-secondary-dark: #cbd5e1;
   --text-muted-light: #64748b;
