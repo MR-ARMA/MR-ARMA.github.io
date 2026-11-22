@@ -5,14 +5,14 @@
     "degree": "M.Sc. in Artificial Intelligence & Robotics",
     "duration": "Oct 2025 – Expected 2027",
     "location": "Isfahan, Iran",
-    "details": "GPA: 16.75/20 (3.50/4.0) • Thesis: Dynamic Steering of Internal Mechanisms and Memory Management in LLMs for Agent Behavioral Stability • Supervisor: Dr. Hamidreza Hakim Davoodi"
+    "details": "GPA: 17.00/20 (1st-year) • Thesis: Dynamic Steering of Internal Mechanisms and Memory Management in LLMs for Agent Behavioral Stability • Supervisor: Dr. Hamidreza Hakim Davoodi"
   },
   {
     "university": "University of Tehran (UT)",
     "logo": "assets/logos/ut.png",
     "degree": "B.Sc. in Computer Engineering (Ranked 1st in Cohort)",
-    "duration": "Sep 2021 – May 2025",
+    "duration": "Sep 2021 – Jul 2025",
     "location": "Tehran, Iran",
-    "details": "GPA: 17.95/20 (3.85/4.0) • Ranked 1st among all entrants for three consecutive academic years (2022–2025) • Thesis: Deep Learning for Emotion & Personality Analysis"
+    "details": "GPA: 17.95/20 (Completed in exactly 8 semesters) • Ranked 1st among all entrants for three consecutive academic years (2022–2025) • Final Project: Multi-label emotion and personality detection on GoEmotions."
   }
 ]

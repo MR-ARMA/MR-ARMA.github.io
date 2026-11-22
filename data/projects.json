@@ -1,30 +1,37 @@
 [
   {
-    "title": "Master's Thesis: Dynamic Attention Steering & Memory Management in Agents",
-    "description": "Designing dynamic attention-steering mechanisms and structured memory architectures to mitigate behavioral drift and maintain long-horizon stability in interactive multi-agent simulations. Investigating how selective memory retrieval and internal representation control support continual adaptation.",
-    "repo": "https://github.com/MR-ARMA",
+    "title": "Neuropolis: LLM-based Multi-Agent Social Simulation Platform",
+    "description": "Developing an open-source, config-driven architecture for multi-agent social and economic simulations. Investigating empirical behavioral economics, dynamic attention steering, and Transactive Memory Systems in large language models to maintain long-horizon agent stability.",
+    "repo": "https://github.com/MR-ARMA/neuropolis",
     "logo": "",
-    "tags": ["Memory Structuring", "Attention Mechanisms", "Continual Adaptation", "Multi-Agent Systems"]
+    "tags": ["LLMs", "Multi-Agent Systems", "Social Simulation", "Behavioral Economics"]
   },
   {
-    "title": "Statistical Estimation & Optimization Foundations in Code",
-    "description": "Developed an open-source collection of modular Python implementations covering Maximum Likelihood Estimation (MLE), Maximum A Posteriori (MAP), regularization strategies, and gradient-based numerical optimization algorithms from scratch.",
-    "repo": "https://github.com/MR-ARMA/ML-Learning-Journey/tree/main",
+    "title": "Evolution Strategies for Scalable Reinforcement Learning",
+    "description": "Implemented and published an open-source Python and PyTorch reproduction of OpenAI's Evolution Strategies algorithm for highly scalable, derivative-free reinforcement learning.",
+    "repo": "https://github.com/MR-ARMA/evolution-strategies-rl",
     "logo": "",
-    "tags": ["Probabilistic ML", "Optimization", "MLE / MAP", "Python", "NumPy"]
+    "tags": ["Reinforcement Learning", "Evolutionary Computation", "PyTorch"]
+  },
+  {
+    "title": "Pollutant Degradation Modeling (Interdisciplinary ML)",
+    "description": "Analyzed a 240-sample experimental chemical engineering dataset to predict pollutant degradation rates using advanced machine learning regression algorithms, including TabPFN, TabNet, and Gaussian Process Regression.",
+    "repo": "https://github.com/MR-ARMA",
+    "logo": "",
+    "tags": ["TabPFN", "TabNet", "Gaussian Process", "Data Science"]
   },
   {
     "title": "Quantifying Gender Bias in Word Embeddings (GloVe)",
-    "description": "Conducted a rigorous statistical and geometric subspace analysis of pre-trained GloVe word embeddings across 380+ occupational titles, measuring representational biases against empirical U.S. Bureau of Labor Statistics workforce data.",
+    "description": "Conducted an independent statistical analysis of pre-trained GloVe word embeddings across 380+ occupational titles, measuring representational biases against empirical U.S. Bureau of Labor Statistics workforce data.",
     "repo": "https://github.com/MR-ARMA/DL-Leaning-Journey/tree/main/03-Gender-Bias-in-Occupations",
     "logo": "",
-    "tags": ["Representation Learning", "Vector Space Geometry", "GloVe", "Statistical Analysis"]
+    "tags": ["NLP", "Bias Mitigation", "Statistical Analysis"]
   },
   {
     "title": "Multi-Label Emotion & Personality Classification (B.Sc. Thesis)",
-    "description": "Developed a deep learning NLP pipeline on the GoEmotions dataset using Word2Vec, GloVe, and Transformer embeddings across LSTM, GRU, BiLSTM, and BiGRU architectures, achieving a micro-average F1 score of 48.9% and validation AUC of 0.6009.",
+    "description": "Developed a deep learning NLP pipeline on the GoEmotions dataset using Transformers, BiGRU, and LSTM architectures, achieving a micro-average F1 score of 48.9%.",
     "repo": "https://github.com/MR-ARMA/DL-Leaning-Journey/tree/main/02-PersonaLens",
     "logo": "",
-    "tags": ["PyTorch", "Deep Learning", "Transformers", "LSTM / BiGRU", "GoEmotions"]
+    "tags": ["Deep Learning", "Transformers", "NLP"]
   }
 ]
